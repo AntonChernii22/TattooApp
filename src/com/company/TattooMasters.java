@@ -1,12 +1,13 @@
 package com.company;
 
 public class TattooMasters extends Masters {
-    static String[] tattooStyle = {"hendpok", "github", "bahbah", "powpow"} ;
+    static String[] tattooStyle = {"hendpok", "github", "bahbah", "powpow"};
     //залил просто для теста, но хочу что б пользователь заполнял массив в main
 
     public TattooMasters() {
         super();
     }
+
     public TattooMasters(String masterIndustry, String masterName, String cityOfWork, Double experienceOfWorkInYears) {
         super(masterIndustry, masterName, cityOfWork, experienceOfWorkInYears);
     }
@@ -16,7 +17,7 @@ public class TattooMasters extends Masters {
         this.tattooStyle = tattooStyle;
     }
 
-    public static String masterIsReadyForStudioClients (Double experienceOfWorkInYears) {
+    public static String masterIsReadyForStudioClients(Double experienceOfWorkInYears) {
         if (experienceOfWorkInYears > 2) {
             System.out.println("Master is ready for the Studio Clients.");
         } else {
@@ -24,7 +25,8 @@ public class TattooMasters extends Masters {
         }
         return null;
     }
-// В этом методе хочу что б он работал коректно, не выводил null в конце и выводил только одну фразу
+
+    // В этом методе хочу что б он работал коректно, не выводил null в конце и выводил только одну фразу
     // либо мастер подходит, либо нет, а я сделал что он выводит кажду
     public static String masterStyleIsMatch(String tatStyle) {
         for (int i = 0; i < tattooStyle.length; i++) {
